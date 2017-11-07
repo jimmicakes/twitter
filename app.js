@@ -3,7 +3,7 @@ const app = express();
 const chalk = require('chalk');
 const log = console.log;
 const nunjucks = require('nunjucks');
-var env = nunjucks.configure('views');
+var env = nunjucks.configure('views', {noCache: true});
 var locals = {
   title: 'Fantasy Characters',
   people: [
